@@ -1,0 +1,13 @@
+{
+  "name": "aula-nodejs",
+  "version": "1.0.0",
+  "description": "Iniciando com NodeJS e NPM",
+  "type": "module",
+  "main": "main.js",
+  "scripts": {
+    "start":"node main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tamir Ferreira",
+  "license": "MIT"
+}
