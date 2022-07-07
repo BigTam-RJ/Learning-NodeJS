@@ -4,13 +4,8 @@
 /* para criar um novo projeto node, primeiro inicializar o npm
 npm init (npm init -y cria o arquivo com os valores default */
 
-/* caso seja necessário trabalhar com import e export, inserir no
-package.json a linha "type": "module", (abaixo do "description" por exemplo)
-OU criar no arquivo .js uma const fs = require('fs') */
 
-import fs from 'fs';
-
-/* Função com um TimeOut ------------------------------------------------------------ */
+/* Função com um TimeOut (perde a ordem correta das chamadas das funções) ---------- */
 function mensagemAgua1() {
     setTimeout(() => {
         console.log("Beba Agua! (1)");
@@ -41,15 +36,3 @@ function mensagemFogo2() {
 
 mensagemAgua2(mensagemFogo2); //imprime primeiro "Beba Agua! (1) e depois "Cuidado, Fogo! (2)"
                               //garantindo a ordem correta das chamadas (sincronismo)
-
-/* Trabalhando com o JSON */                              
-let alunos;
-fs.readFile('./alunos.json',(erro, dados) =>{
-    if (erro) {
-        console.error(erro);
-        return;
-    }
-    alunos = JSON.parse(dados);
-    console.log('alunos', alunos);
-});
-
